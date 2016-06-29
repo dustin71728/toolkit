@@ -13,9 +13,9 @@ fi
 echo "Pull and rebase first."
 echo
 git pull --rebase
-echo "Push to gerrit use branch:"$branch" commit-id: "$commit
-echo
-if [ $? -eq 0 ]
+if [[ $? -eq 0 ]]
 then
+	echo "Push to gerrit use branch:"$branch" commit-id: "$commit
+	echo
 	git push origin $commit:refs/for/$branch
 fi
